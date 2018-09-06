@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content -%}
+    <i class="fas fa-coffee"></i>
+
+    <table class="table table-striped">
+
+        <thead>
+            <th>이름</th>
+            <th>메일</th>
+        </thead>
+
+        <tbody>
+            {% for i in kim %}
+            <tr>
+                <td>{{ i.username }}</td>
+                <td>{{ i.email }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+{%- endblock content %}

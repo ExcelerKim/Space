@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form method="GET" action="/form">
+        {{ form2.csrf_token }}
+        {{ form2.text.label }} {{ form2.text(size=20) }}
+        {{ form2.password.label }} {{ form2.password(size=20) }}
+        <input type="submit" value="Go">
+    </form>
+{#    <h1>{{ name }}를 입력하셨습니다.</h1>#}
+{#    <form action="/form" method="get" name="kim">#}
+{#    <input type="text" name="text">#}
+{#    <input type="password" name="password">#}
+{#    <input type="submit" value="시작">#}
+{#    </form>#}
+
+{%  endblock content %}
